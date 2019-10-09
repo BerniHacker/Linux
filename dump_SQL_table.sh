@@ -1,3 +1,4 @@
+
 # This script allows dumping a defined table
 # from a defined origin MySQL database into a defined destination
 # MySQL database.
@@ -60,13 +61,13 @@ do
     if [ $elapsed_time -gt 0 ]; then  # using the 'greater than' operator
         # Calculating the speed as number of handled items per second
         speed=$(($sofar / $elapsed_time))
-	    # Calculating the estimated remaining seconds
-	    remaining_items=$(($TOTAL - $sofar))
+	# Calculating the estimated remaining seconds
+	remaining_items=$(($TOTAL - $sofar))
         # Avoiding divisions by zero
         if [ $speed -gt 0 ]; then  # using the 'greater than' operator
-	        estimated_seconds=$(($remaining_items / $speed))
-	        # Printing on the consolle the remaining time
-	        printf 'remaining time: %02d:%02d:%02d\n' \
+	    estimated_seconds=$(($remaining_items / $speed))
+	    # Printing on the consolle the remaining time
+	    printf 'remaining time: %02d:%02d:%02d\n' \
             $(($estimated_seconds/3600)) $(($estimated_seconds%3600/60)) \
             $(($estimated_seconds%60))
             printf "\n****************************************\n\n"
