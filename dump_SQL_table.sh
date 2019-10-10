@@ -21,7 +21,7 @@ TABLE_NAME='tablename'  # string
 DEST_DB_USER='username'  # string
 DEST_DB_PASSWORD='password'  # string
 DEST_DB_ADDRESS='address'  # string
-DEST_DB_NAME='dbname'
+DEST_DB_NAME='dbname'  # string
 
 # Getting the start time
 start_time=$(date +"%T")  # HH:MM:SS format
